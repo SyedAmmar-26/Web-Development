@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Rajdhani&family=Ubuntu:wght@300&display=swap');
+
+body {
+  height: 99vh;
+  margin: 0%;
+  padding: 0%;
+  background-color: rgb(28, 48, 46);
+  box-sizing: border-box;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(18, 27, 26, 0.526);
+  color: rgb(195, 202, 200);
+  border-bottom: 2px solid rgb(18, 27, 26);
+}
+
+#logo {
+  width: 95px;
+  height: 95px;
+  padding-right: 10px;
+  filter: brightness(75%);
+}
+
+#name {
+  font-size: 38px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.message {
+  overflow-y: auto;
+  height: 72vh;
+  width: 64.5vw;
+  background-color: rgba(42, 63, 58, 0.282);
+  border: 4px solid rgb(31, 44, 41);
+  margin: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(28, 48, 46);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(18, 27, 26, 0.526);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(18, 27, 26, 0.341);
+}
+
+.msg {
+  width: 24vw;
+  min-height: 22px;
+  padding: 10px 6px;
+  clear: both;
+  margin: 4px 6px;
+  border-radius: 10px;
+  font-family: 'Ubuntu','Kalam', cursive;
+  font-size: 17px;
+  box-sizing: border-box;
+  max-height: fit-content;
+  color: rgb(195, 202, 200);
+}
+
+.right {
+  background-color: rgb(22, 34, 32);
+  border: 2px solid rgb(20, 37, 36);
+  float: right;
+}
+
+.left {
+  float: left;
+  background-color: rgb(28, 48, 46);
+  border: 2px solid rgb(20, 37, 36);
+}
+
+.center {
+  margin: 2px auto;
+  border: 2px solid rgb(16, 28, 27);
+  text-align: center;
+  width: fit-content;
+  min-height: 9px;
+  padding: 2px 3px;
+  background-color: rgb(19, 30, 28);
+  font-size: medium;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#send {
+  display: flex;
+  width: 65vw;
+  justify-content: space-between;
+  margin: 3px auto;
+}
+
+#message {
+  width: 58vw;
+  background-color: rgb(40, 51, 51);
+  height: 35px;
+  border-radius: 10px;
+  outline: none;
+  border: 3px solid rgb(32, 41, 41);
+  font-family: 'Ubuntu','Kalam', cursive;
+  font-size: 19px;
+  font-weight: bold;
+  color: rgb(195, 202, 200);
+}
+
+.btn {
+  width: 85px;
+  background-color: rgb(40, 51, 51);
+  border: 3px solid rgb(32, 41, 41);
+  border-radius: 10px;
+  height: 41px;
+  font-family: "Ubuntu";
+  font-size: 16px;
+  font-weight: 525;
+  color: rgb(147, 155, 153);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(35, 45, 45);
+  color: rgb(18, 27, 26);
+}
+
+i {
+  padding-right: 6px;
+}

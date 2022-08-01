@@ -1,0 +1,14 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "This is the app which can manage chat in group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Syed Ammar",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.5.1"
+  }
+}
