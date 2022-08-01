@@ -22,9 +22,13 @@ io.on("connection", (socket) => {
     });
   });
 
+  socket.on("show", () => {
+    socket.emit("joined", users);
+  });
+
   // If someone leaves the chat, let others know
   socket.on("disconnect", (message) => {
-    socket.broadcast.emit("center", users[socket.id]);
+    socket.broadcast.emit("left", users[socket.id]);
     delete users[socket.id];
   });
 });

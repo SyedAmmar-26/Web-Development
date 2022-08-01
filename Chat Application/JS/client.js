@@ -20,30 +20,53 @@ const append = (message, position) => {
 };
 
 // Ask new user for his/her name and let the server know
-const name = prompt("Enter your name to join :");
+let name = prompt("Enter your name to join :");
 socket.emit("new-user-joined", name);
 
 // If a new user joins, receive his/her name from the server
 socket.on("user-joined", (name) => {
-  console.log(`${name} joined the chat!`);
-  append(`${name} joined the chat`, "center");
+  if (name) {
+    if(name){
+    append(`${name} joined`, "center");
+  }
+  }
 });
 
 // If server sends a message, receive it
 socket.on("receive", (data) => {
-  append(`${data.name}: ${data.message}`, "left");
+  if (data.name) {
+    append(`${data.name}: ${data.message}`, "left");
+  }
 });
 
 // If a user leaves the chat, append the info to the container
+socket.on("joined", (users) => {
+  for (user in users) {
+    if (user != socket.id) {
+      if (users[user]) {
+        append(`${users[user]} is joined`, "center");
+      }
+    } else {
+      continue;
+    }
+  }
+});
+
 socket.on("left", (name) => {
-  append(`${name} left the chat`, "center");
+  if (name) {
+    append(`${name} left`, "center");
+  }
 });
 
 // If the form gets submitted, send server the message
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const message = messageInput.value;
-  append(`You: ${message}`, "right");
-  socket.emit("send", message);
+  if (message == "people.show()" || message == "people.show") {
+    socket.emit("show", message);
+  } else {
+    append(`You: ${message}`, "right");
+    socket.emit("send", message);
+  }
   messageInput.value = "";
 });
